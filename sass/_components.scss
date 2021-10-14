@@ -1,3 +1,42 @@
+// BUTTON
+// BUTTON
+.btn {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 25rem;
+  padding: 0.325em 0.6em; // fallback
+  padding: clamp(0.15625rem, 0.0953rem + 0.3049vw, 0.3125rem)
+    clamp(0.3rem, 0.1829rem + 0.5854vw, 0.6rem);
+  font-family: var(--ff-roboto);
+  font-size: 1.25rem; // fallback
+  font-size: clamp(1.25rem, 1.1524rem + 0.4878vw, 1.5rem);
+  font-weight: 600;
+  color: var(--clr-black);
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--clr-main);
+  border: 0.375rem solid transparent; // pre-defined border to prevent layout-shift
+  border-radius: 0.25em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0.375em 0.75em -0.125em,
+    rgba(0, 0, 0, 0.3) 0px 0.1875em 0.4375em -0.1875em;
+  transition: opacity 250ms ease-in;
+  animation: pulse-main-dk 2s infinite;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:focus-visible {
+  border: 0.375rem solid var(--clr-black);
+  outline: none;
+  transform: scale(1.025);
+}
+
+//CARDS
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -41,6 +80,7 @@
 
   .card__amount-wrapper {
     display: flex;
+    gap: 0.25rem;
     align-items: center;
     justify-content: center;
     width: 100%;
