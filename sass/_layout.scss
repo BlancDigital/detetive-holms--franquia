@@ -7,13 +7,24 @@
 }
 
 .section-hero {
-  background-color: rgb(158, 158, 250);
+  background-color: var(--clr-main);
 }
 
-.align-left {
-  width: 66.66%;
-  //   height: 400px;
-  //   background-color: red;
+.section-numbers {
+  .subtitle {
+    font-weight: 500;
+  }
+
+  .cifra,
+  .amount {
+    font-family: var(--ff-title);
+  }
+}
+
+.section-primeira {
+  p + p {
+    margin-top: 2rem;
+  }
 }
 
 .form-container {
