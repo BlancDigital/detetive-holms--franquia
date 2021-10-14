@@ -1,0 +1,255 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+section {
+  padding: 11vh 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+.fluid.fluid {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 56.6667%;
+  height: 100%;
+  margin: 0 auto 0 10%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 4rem;
+  justify-items: center;
+}
+
+.cards--numbers {
+  gap: 1rem;
+}
+
+.cards__card {
+  display: grid;
+  grid-template-rows: 7rem 1fr;
+  gap: 1rem;
+  align-content: flex-start;
+  justify-items: center;
+  text-align: center;
+}
+.cards__card .title {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--clr-dark-green);
+}
+.cards__card img {
+  align-self: flex-end;
+  max-width: 300px;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card .card__amount-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.card .cifra {
+  font-size: 1.5rem;
+}
+.card .amount {
+  font-size: 3rem;
+}
+.card .subtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.form {
+  padding: 2.25rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0.3125em 0.9375em;
+}
+
+.form p {
+  margin-bottom: 1.5em;
+}
+
+/* Style the input fields */
+.form input {
+  width: 100%;
+  padding: 0.625rem;
+  font-family: var(--ff-roboto);
+  font-size: 1.0625rem;
+  color: var(--clr-white);
+  border: 0.0625rem solid #323232;
+  border-radius: 0.25rem;
+}
+
+.form__field-wrapper {
+  margin-top: 1em;
+}
+
+.form select {
+  width: 100%;
+  padding: 0 1em 0 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: inherit;
+  /* Additional resets for further consistency */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  /* A reset of styles, including removing the default dropdown arrow */
+  appearance: none;
+}
+
+.form__select-wrapper {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  width: 100%;
+  padding: 0.625em;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border: 0.0625em solid var(--select-border);
+  border-radius: 0.25em;
+}
+
+.form__select-wrapper:focus-within {
+  border: 0.0625em solid var(--select-focus);
+}
+
+.form__select-wrapper::after {
+  justify-self: end;
+  width: 0.8em;
+  height: 0.5em;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  content: "";
+  background-color: var(--select-arrow);
+}
+
+select,
+.form__select-wrapper::after {
+  grid-area: select;
+}
+
+.form .btn--submit {
+  max-width: 100%;
+  margin-top: 1em;
+  font-size: var(--fs-md);
+}
+
+.logo {
+  padding: 1rem 0;
+}
+.logo img {
+  max-height: 4rem;
+}
+
+.section-hero {
+  background-color: #9e9efa;
+}
+
+.align-left {
+  width: 66.66%;
+}
+
+.form-container {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  max-width: 22.6667%;
+}
+
+/*# sourceMappingURL=style.css.map */

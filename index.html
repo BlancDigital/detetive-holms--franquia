@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- url -->
+    <link rel="canonical" href="http://..." />
+    <meta property="og:url" content="http://..." />
+    <meta name="twitter:url" content="http://..." />
+
+    <!-- title -->
+    <meta property="og:title" content="Title" />
+
+    <!-- description -->
+    <meta name="description" content="..." />
+    <meta property="og:description" content="..." />
+    <meta name="twitter:description" content="..." />
+
+    <!-- image -->
+    <meta property="og:image" content="http://..." />
+    <meta name="twitter:image" content="http://..." />
+
+    <!-- misc -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="theme-color" content="#a52a2a" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- LOGO -->
+    <div class="logo align-left fluid">
+      <div class="container"><img src="./public/images/logo.png" alt="" /></div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-container">
+      <form action="" class="form">
+        <!-- FORM__NAME -->
+        <div class="form__field-wrapper">
+          <label class="" for="name-form">Nome*</label>
+          <input
+            type="text"
+            name="name-form"
+            id="nameForm"
+            placeholder="Seu nome aqui"
+            autocomplete="off"
+            oninput="validateName(this)"
+            required
+          />
+        </div>
+        <!-- FORM__CELLPHONE -->
+        <div class="form__field-wrapper">
+          <label class="" for="cellphone-form">Número de celular*</label>
+          <input
+            type="tel"
+            name="cellphone-form"
+            id="cellphoneForm"
+            placeholder="Seu número aqui"
+            title="Seu número de celular com o código de área"
+            onkeypress="mascara(this)"
+            oninput="validateNumber(this)"
+            maxlength="15"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <!-- FORM__EMAIL -->
+        <div class="form__field-wrapper">
+          <label for="email-form">Seu melhor e-mail para contato*</label>
+          <input
+            type="email"
+            name="email-form"
+            id="emailForm"
+            placeholder="email@exemplo.com"
+            oninput="validateEmail(this)"
+            required
+          />
+        </div>
+        <button
+          class="btn btn--full btn--submit"
+          name="submit-btn"
+          formaction="enviar.php"
+          type="submit"
+          id="enviar"
+        >
+          Fale com o detetive
+        </button>
+      </form>
+    </div>
+
+    <!-- #SECTION-HERO -->
+    <section class="section-hero align-left fluid">
+      <div class="container">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
+        <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
+        <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
+      </div>
+    </section>
+
+    <!-- #SECTION-NUMBERS -->
+    <section class="section-numbers align-left fluid">
+      <div class="container">
+        <h2>Lorem, ipsum dolor.</h2>
+        <div class="cards cards--numbers">
+          <!-- start of item -->
+          <div class="card">
+            <p class="title">Faturamento</p>
+
+            <div class="card__amount-wrapper">
+              <span class="cifra">R$</span>
+              <p class="amount">360k</p>
+            </div>
+
+            <p class="subtitle">Até 90k por ano</p>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="card">
+            <p class="title">Faturamento</p>
+
+            <div class="card__amount-wrapper">
+              <span class="cifra">R$</span>
+              <p class="amount">360k</p>
+            </div>
+
+            <p class="subtitle">Até 90k por ano</p>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="card">
+            <p class="title">Faturamento</p>
+
+            <div class="card__amount-wrapper">
+              <span class="cifra">R$</span>
+              <p class="amount">360k</p>
+            </div>
+
+            <p class="subtitle">Até 90k por ano</p>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </section>
+
+    <!-- #SECTION-DIFERENCIAIS -->
+    <section class="section-diferenciais align-left fluid">
+      <div class="container">
+        <h2>Diferenciais</h2>
+        <div class="cards">
+          <!-- start of item -->
+          <div class="cards__card">
+            <img
+              src="./public/images/fire.png"
+              alt=""
+              width="150"
+              height="122"
+            />
+            <div class="cards__card__text">
+              <p class="title">Incêndio</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="cards__card">
+            <img
+              src="./public/images/roubo.png"
+              alt=""
+              width="150"
+              height="102"
+            />
+            <div class="cards__card__text">
+              <p class="title">Furto</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="cards__card">
+            <img
+              src="./public/images/broken_car.png"
+              alt=""
+              width="150"
+              height="111"
+            />
+            <div class="cards__card__text">
+              <p class="title">Acidentes</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </section>
+
+    <!-- #SECTION-PRIMEIRA -->
+    <section class="section-primeira align-left fluid">
+      <div class="container">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam,
+          voluptates dignissimos architecto similique corrupti voluptatibus
+          illum repellendus excepturi eos mollitia porro fugiat recusandae, in
+          minima optio distinctio, quis sint pariatur.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

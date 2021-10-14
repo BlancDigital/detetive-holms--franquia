@@ -1,0 +1,145 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 4rem;
+  justify-items: center;
+}
+
+.cards--numbers {
+  gap: 1rem;
+}
+
+.cards__card {
+  display: grid;
+  grid-template-rows: 7rem 1fr;
+  gap: 1rem;
+  align-content: flex-start;
+  justify-items: center;
+  text-align: center;
+
+  .title {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--clr-dark-green);
+  }
+
+  img {
+    align-self: flex-end;
+    max-width: 300px;
+  }
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 15%);
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card__amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cifra {
+    font-size: 1.5rem;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+// FORM
+.form {
+  padding: 2.25rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0.3125em 0.9375em;
+}
+
+.form p {
+  // margin-top: -1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Style the input fields */
+.form input {
+  width: 100%;
+  padding: 0.625rem;
+  font-family: var(--ff-roboto);
+  font-size: 1.0625rem;
+  color: var(--clr-white);
+  border: 0.0625rem solid #323232;
+  border-radius: 0.25rem;
+}
+
+.form__field-wrapper {
+  margin-top: 1em;
+}
+
+.form select {
+  width: 100%;
+  padding: 0 1em 0 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: inherit;
+  /* Additional resets for further consistency */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  /* A reset of styles, including removing the default dropdown arrow */
+  appearance: none;
+}
+
+.form__select-wrapper {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  width: 100%;
+  padding: 0.625em;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border: 0.0625em solid var(--select-border);
+  border-radius: 0.25em;
+}
+
+.form__select-wrapper:focus-within {
+  border: 0.0625em solid var(--select-focus);
+}
+
+.form__select-wrapper::after {
+  justify-self: end;
+  width: 0.8em;
+  height: 0.5em;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  content: "";
+  background-color: var(--select-arrow);
+}
+
+select,
+.form__select-wrapper::after {
+  grid-area: select;
+}
+
+.form .btn--submit {
+  max-width: 100%;
+  margin-top: 1em;
+  font-size: var(--fs-md);
+}
