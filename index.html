@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Questrial&family=Roboto:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Questrial&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -44,65 +44,9 @@
       <div class="container"><img src="./public/images/logo.png" alt="" /></div>
     </div>
 
-    <!-- FORM -->
-    <div class="form-container">
-      <form action="" class="form">
-        <!-- FORM__NAME -->
-        <div class="form__field-wrapper">
-          <label class="" for="name-form">Nome*</label>
-          <input
-            type="text"
-            name="name-form"
-            id="nameForm"
-            placeholder="Seu nome aqui"
-            autocomplete="off"
-            oninput="validateName(this)"
-            required
-          />
-        </div>
-        <!-- FORM__CELLPHONE -->
-        <div class="form__field-wrapper">
-          <label class="" for="cellphone-form">Número de celular*</label>
-          <input
-            type="tel"
-            name="cellphone-form"
-            id="cellphoneForm"
-            placeholder="Seu número aqui"
-            title="Seu número de celular com o código de área"
-            onkeypress="mascara(this)"
-            oninput="validateNumber(this)"
-            maxlength="15"
-            autocomplete="off"
-            required
-          />
-        </div>
-        <!-- FORM__EMAIL -->
-        <div class="form__field-wrapper">
-          <label for="email-form">Seu melhor e-mail para contato*</label>
-          <input
-            type="email"
-            name="email-form"
-            id="emailForm"
-            placeholder="email@exemplo.com"
-            oninput="validateEmail(this)"
-            required
-          />
-        </div>
-        <button
-          class="btn btn--full btn--submit"
-          name="submit-btn"
-          formaction="enviar.php"
-          type="submit"
-          id="enviar"
-        >
-          Fale com o detetive
-        </button>
-      </form>
-    </div>
-
     <!-- #SECTION-HERO -->
     <section class="section-hero align-left fluid">
-      <div class="container">
+      <div class="container section-center-mb">
         <h1>Lorem, ipsum dolor.</h1>
         <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
         <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
@@ -113,19 +57,17 @@
     <!-- #SECTION-NUMBERS -->
     <section class="section-numbers align-left fluid">
       <div class="container">
-        <p class="subtitle">Teste</p>
         <h2>Lorem, ipsum dolor.</h2>
         <div class="cards cards--numbers">
           <!-- start of item -->
           <div class="card">
-            <p class="title">Faturamento</p>
+            <p class="title">Investimento</p>
 
             <div class="card__amount-wrapper">
-              <span class="cifra">R$</span>
-              <p class="amount">360k</p>
+              <p class="amount">35 mil</p>
             </div>
 
-            <p class="subtitle">Até 90k por ano</p>
+            <p class="subtitle">Um dos mais baixos do mercado</p>
           </div>
           <!-- end of item -->
           <!-- start of item -->
@@ -133,8 +75,7 @@
             <p class="title">Faturamento</p>
 
             <div class="card__amount-wrapper">
-              <span class="cifra">R$</span>
-              <p class="amount">360k</p>
+              <p class="amount">360 mil</p>
             </div>
 
             <p class="subtitle">Até 90k por ano</p>
@@ -142,11 +83,10 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="card">
-            <p class="title">Faturamento</p>
+            <p class="title">Payback</p>
 
             <div class="card__amount-wrapper">
-              <span class="cifra">R$</span>
-              <p class="amount">360k</p>
+              <p class="amount">210 dias</p>
             </div>
 
             <p class="subtitle">Até 90k por ano</p>
@@ -170,7 +110,7 @@
               height="122"
             />
             <div class="cards__card__text">
-              <p class="title">Incêndio</p>
+              <p class="title">Royalties 0</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
           </div>
@@ -184,7 +124,7 @@
               height="102"
             />
             <div class="cards__card__text">
-              <p class="title">Furto</p>
+              <p class="title">Marketing</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
           </div>
@@ -198,7 +138,7 @@
               height="111"
             />
             <div class="cards__card__text">
-              <p class="title">Acidentes</p>
+              <p class="title">Preparação</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
           </div>
@@ -227,5 +167,159 @@
         <div class="logo"><img src="./public/images/logo.png" alt="" /></div>
       </div>
     </section>
+
+    <!-- FORM -->
+    <div class="form-container">
+      <form action="" class="form">
+        <h6>Seja um franqueado <b>Holms!</b></h6>
+        <p>Tenha sua prórpia franquia de investigação particular.</p>
+        <!-- FORM__NAME -->
+        <div class="form__field-wrapper">
+          <label class="" for="name-form">Nome completo</label>
+          <input
+            type="text"
+            name="name-form"
+            id="nameForm"
+            placeholder="Seu nome aqui"
+            autocomplete="off"
+            oninput="validateName(this)"
+            required
+          />
+        </div>
+        <!-- FORM__CELLPHONE -->
+        <div class="form__field-wrapper">
+          <label class="" for="cellphone-form">Número de celular</label>
+          <input
+            type="tel"
+            name="cellphone-form"
+            id="cellphoneForm"
+            placeholder="Seu número aqui"
+            title="Seu número de celular com o código de área"
+            onkeypress="mascara(this)"
+            oninput="validateNumber(this)"
+            maxlength="15"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <!-- FORM__EMAIL -->
+        <div class="form__field-wrapper">
+          <label for="email-form">Seu melhor e-mail para contato</label>
+          <input
+            type="email"
+            name="email-form"
+            id="emailForm"
+            placeholder="email@exemplo.com"
+            oninput="validateEmail(this)"
+            required
+          />
+        </div>
+        <!-- FORM__AREA -->
+        <div class="form__field-wrapper">
+          <label for="area-form">Capital para investimento</label>
+          <div class="form__select-wrapper">
+            <select name="area-form" id="areaForm">
+              <option value="50-100m²">Tenho até R$30 mil</option>
+              <option value="101-250m²">Acima de R$50 mil</option>
+              <option value="251-500 m²">Ainda não tenho capital</option>
+            </select>
+          </div>
+        </div>
+        <button
+          class="btn btn--full btn--submit"
+          name="submit-btn"
+          formaction="enviar.php"
+          type="submit"
+          id="enviar"
+        >
+          QUERO ME TORNAR UM FRANQUEADO
+        </button>
+      </form>
+    </div>
+
+    <!-- FORM MODAL -->
+    <div class="modal modal--main-form is-hidden" id="modal">
+      <form
+        method="post"
+        action="enviar.php"
+        id="enviar"
+        name="enviar"
+        class="form"
+        autocomplete="off"
+        onsubmit="return validateForm(e)"
+      >
+        <div class="wrapper">
+          <button class="btn btn--close" type="button">&times;</button>
+
+          <h6>Seja um franqueado <b>Holms!</b></h6>
+          <p>Tenha sua prórpia franquia de investigação particular.</p>
+          <p id="alertForm" class="alert is-hidden">
+            Preencha todos os campos corretamente!
+          </p>
+          <!-- FORM__NAME -->
+          <div class="form__field-wrapper">
+            <label class="" for="name-form">Nome*</label>
+            <input
+              type="text"
+              name="name-form"
+              id="nameForm"
+              placeholder="Seu nome aqui"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <!-- FORM__CELLPHONE -->
+          <div class="form__field-wrapper">
+            <label class="" for="cellphone-form">Número de celular*</label>
+            <input
+              type="tel"
+              name="cellphone-form"
+              id="cellphoneForm"
+              placeholder="Seu número aqui"
+              title="Seu número de celular com o código de área"
+              onkeypress="mascara(this)"
+              maxlength="15"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <!-- FORM__EMAIL -->
+          <div class="form__field-wrapper">
+            <label for="email-form">Seu melhor e-mail para contato*</label>
+            <input
+              type="email"
+              name="email-form"
+              id="emailForm"
+              placeholder="email@exemplo.com"
+              required
+            />
+          </div>
+
+          <!-- FORM__AREA -->
+          <div class="form__field-wrapper">
+            <label for="area-form">Capital para investimento*</label>
+            <div class="form__select-wrapper">
+              <select name="area-form" id="areaForm">
+                <option value="50-100m²">Tenho até R$30 mil</option>
+                <option value="101-250m²">Acima de R$50 mil</option>
+                <option value="251-500 m²">Ainda não tenho capital</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            class="btn btn--submit"
+            name="submit-btn"
+            formaction="enviar.php"
+            type="submit"
+            id="enviar"
+          >
+            QUERO ME TORNAR UM FRANQUEADO
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
