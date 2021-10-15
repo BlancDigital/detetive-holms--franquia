@@ -17,6 +17,18 @@
   --clr-black-200: #333;
   --clr-black-100: #262626;
   --clr-black: #000;
+
+  --select-border: rgb(170, 170, 170);
+  --select-focus: var(--clr-main);
+  --select-arrow: var(--select-border);
+
+  --fs-xs: clamp(1.15rem, 1.0134rem + 0.6829vw, 1.5rem);
+  --fs-md: clamp(1.3125rem, 1.1797rem + 0.625vw, 1.625rem);
+  --fs-lg: clamp(1.625rem, 1.4055rem + 1.0976vw, 2.1875rem);
+  --fs-xlg: clamp(2.1875rem, 1.5234rem + 3.125vw, 3.75rem);
+  --fs-xxlg: clamp(3rem, 2.2195rem + 3.9024vw, 5rem);
+
+  --box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 15%);
 }
 
 /* Remove default margin */
@@ -44,6 +56,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+p {
+  line-height: 1.78;
+}
+
 h1,
 h2,
 h3,
@@ -51,6 +67,7 @@ h4,
 h5,
 h6 {
   font-family: var(--ff-title);
+  font-size: var(--fs-xlg);
 }
 
 /* Set core body defaults */
@@ -82,7 +99,10 @@ select {
 }
 
 section {
-  padding: 11vh 0;
+  width: 90%;
+  max-width: 1400px;
+  padding: 4.5rem 0 2.25rem 0;
+  margin: 0 auto;
 }
 
 h2 {
@@ -105,26 +125,12 @@ h2 {
   }
 }
 
-.fluid.fluid {
-  width: 100%;
-}
-
-.align-left {
-  width: 66.66%;
-  //   height: 400px;
-  //   background-color: red;
-}
-
-.container {
-  position: relative;
-  width: 56.6667%; // 66.5557% - 10% (margin)
-  height: 100%;
-  margin: 0 auto 0 10%;
-  // background: blue;
-}
-
 .subtitle {
   font-family: var(--ff-subtitle);
-  color: var(--clr-main);
   text-align: center;
+}
+
+.section-center-mb {
+  width: 90%;
+  margin: 0 auto;
 }
