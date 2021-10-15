@@ -7,6 +7,7 @@
 }
 
 .section-hero {
+  width: 100%;
   background-color: var(--clr-main);
 }
 
@@ -15,7 +16,6 @@
     font-weight: 500;
   }
 
-  .cifra,
   .amount {
     font-family: var(--ff-title);
   }
@@ -28,9 +28,49 @@
 }
 
 .form-container {
-  position: fixed;
-  top: 10%;
-  right: 10%;
-  max-width: 22.6667%;
-  //   background: yellow;
+  display: none; // hides the sidebar form
+}
+
+// 900px
+@media screen and (min-width: 56.25rem) {
+  .fluid.fluid {
+    width: 100%;
+  }
+
+  .align-left {
+    width: 66.66%;
+    //   height: 400px;
+    //   background-color: red;
+  }
+
+  .container {
+    position: relative;
+    width: 56.6667%; // 66.5557% - 10% (margin)
+    height: 100%;
+    margin: 0 auto 0 10%;
+    // background: blue;
+  }
+
+  .cards--numbers {
+    padding: 0 1rem 0 0;
+  }
+
+  .form-container {
+    position: fixed;
+    top: 10%;
+    right: 2.5%;
+    display: block;
+    max-width: 30%;
+    //   background: yellow;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .form-container {
+    position: fixed;
+    top: 2.5%;
+    right: 10%;
+    max-width: 22.6667%;
+    //   background: yellow;
+  }
 }
