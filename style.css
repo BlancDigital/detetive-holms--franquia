@@ -15,7 +15,7 @@
   --clr-white: #f8f8ff;
   --clr-black-200: #333;
   --clr-black-100: #262626;
-  --clr-black: #000;
+  --clr-black: #232b2f;
   --select-border: rgb(170, 170, 170);
   --select-focus: var(--clr-main);
   --select-arrow: var(--select-border);
@@ -72,6 +72,7 @@ body {
   text-rendering: optimizeSpeed;
   font-family: var(--ff-body);
   line-height: 1.5;
+  color: var(--clr-black);
 }
 
 /* A elements that don't have a class get default styles */
@@ -101,8 +102,14 @@ section {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 56.25rem) {
+  section {
+    max-width: 5000px;
+  }
+}
 h2 {
   margin-bottom: 2rem;
+  line-height: 1;
   text-align: center;
 }
 
@@ -227,11 +234,17 @@ h2 {
   width: 100%;
 }
 .card .amount {
-  font-size: 3rem;
+  margin-top: -1rem;
+  font-size: 4rem;
+  font-weight: 700;
   color: var(--clr-main);
 }
+.card .amount > span {
+  margin-left: -0.75rem;
+  font-size: 2rem;
+}
 .card .subtitle {
-  font-size: 0.85rem;
+  margin-top: -1.5rem;
   font-weight: 300;
   text-align: center;
 }
@@ -416,6 +429,22 @@ select,
   width: 100%;
   background-color: var(--clr-main);
 }
+.section-hero .container {
+  display: flex;
+  align-items: center;
+}
+.section-hero h1 {
+  line-height: 1;
+}
+.section-hero .wrapper {
+  width: 100%;
+}
+
+.section-hero__image {
+  display: none;
+  max-width: 300px;
+  margin-right: -5.5%;
+}
 
 .section-numbers .subtitle {
   font-weight: 500;
@@ -424,6 +453,9 @@ select,
   font-family: var(--ff-title);
 }
 
+.section-primeira {
+  text-align: justify;
+}
 .section-primeira p + p {
   margin-top: 2rem;
 }
@@ -432,13 +464,18 @@ select,
   display: none;
 }
 
+@media screen and (min-width: 37.5rem) {
+  .section-hero {
+    padding: 0;
+  }
+
+  .section-hero__image {
+    display: block;
+  }
+}
 @media screen and (min-width: 56.25rem) {
   .fluid.fluid {
     width: 100%;
-  }
-
-  .align-left {
-    width: 66.66%;
   }
 
   .container {
@@ -446,6 +483,10 @@ select,
     width: 56.6667%;
     height: 100%;
     margin: 0 auto 0 10%;
+  }
+
+  .section-hero__image {
+    margin-right: -1.25%;
   }
 
   .cards--numbers {
