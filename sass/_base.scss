@@ -16,7 +16,7 @@
   --clr-white: #f8f8ff;
   --clr-black-200: #333;
   --clr-black-100: #262626;
-  --clr-black: #000;
+  --clr-black: #232b2f;
 
   --select-border: rgb(170, 170, 170);
   --select-focus: var(--clr-main);
@@ -76,6 +76,7 @@ body {
   text-rendering: optimizeSpeed;
   font-family: var(--ff-body);
   line-height: 1.5;
+  color: var(--clr-black);
 }
 
 /* A elements that don't have a class get default styles */
@@ -105,8 +106,15 @@ section {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 56.25rem) {
+  section {
+    max-width: 5000px;
+  }
+}
+
 h2 {
   margin-bottom: 2rem;
+  line-height: 1;
   text-align: center;
 }
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
