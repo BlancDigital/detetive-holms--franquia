@@ -39,6 +39,12 @@
   </head>
 
   <body>
+    <div class="exit-form__trigger" id="exitFormTrigger"></div>
+    <div
+      class="exit-form__trigger-activator"
+      id="exitFormTriggerActivator"
+    ></div>
+
     <!-- LOGO -->
     <div class="logo fluid">
       <div class="container"><img src="./public/images/logo.png" alt="" /></div>
@@ -54,7 +60,7 @@
           <p>Lorem ipsum <b>dolor sit amet</b> consectetur.</p>
         </div>
         <img
-          src="./public/images/detetive 2.png"
+          src="./public/images/detetive_2.png"
           alt=""
           class="section-hero__image"
         />
@@ -128,7 +134,7 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/4.png" alt="" width="125" height="86" />
+            <img src="./public/images/5.png" alt="" width="104" height="88" />
             <div class="cards__card__text">
               <p class="title">Preparação</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
@@ -160,77 +166,10 @@
       </div>
     </section>
 
-    <!-- FORM -->
-    <div class="form-container">
-      <form action="" class="form">
-        <h6>Seja um franqueado <b>Holms!</b></h6>
-        <p>Tenha sua prórpia franquia de investigação particular.</p>
-        <!-- FORM__NAME -->
-        <div class="form__field-wrapper">
-          <label class="" for="name-form">Nome completo</label>
-          <input
-            type="text"
-            name="name-form"
-            id="nameForm"
-            placeholder="Seu nome aqui"
-            autocomplete="off"
-            oninput="validateName(this)"
-            required
-          />
-        </div>
-        <!-- FORM__CELLPHONE -->
-        <div class="form__field-wrapper">
-          <label class="" for="cellphone-form">Número de celular</label>
-          <input
-            type="tel"
-            name="cellphone-form"
-            id="cellphoneForm"
-            placeholder="Seu número aqui"
-            title="Seu número de celular com o código de área"
-            onkeypress="mascara(this)"
-            oninput="validateNumber(this)"
-            maxlength="15"
-            autocomplete="off"
-            required
-          />
-        </div>
-        <!-- FORM__EMAIL -->
-        <div class="form__field-wrapper">
-          <label for="email-form">Seu melhor e-mail para contato</label>
-          <input
-            type="email"
-            name="email-form"
-            id="emailForm"
-            placeholder="email@exemplo.com"
-            oninput="validateEmail(this)"
-            required
-          />
-        </div>
-        <!-- FORM__AREA -->
-        <div class="form__field-wrapper">
-          <label for="area-form">Capital para investimento</label>
-          <div class="form__select-wrapper">
-            <select name="area-form" id="areaForm">
-              <option value="50-100m²">Tenho até R$30 mil</option>
-              <option value="101-250m²">Acima de R$50 mil</option>
-              <option value="251-500 m²">Ainda não tenho capital</option>
-            </select>
-          </div>
-        </div>
-        <button
-          class="btn btn--full btn--submit"
-          name="submit-btn"
-          formaction="enviar.php"
-          type="submit"
-          id="enviar"
-        >
-          QUERO ME TORNAR UM FRANQUEADO
-        </button>
-      </form>
-    </div>
+    <button class="btn btn--cta btn--fixed">Quero ser um franqueado!</button>
 
-    <!-- FORM MODAL -->
-    <div class="modal modal--main-form is-hidden" id="modal">
+    <!-- FORM -->
+    <div class="form-container modal--main-form is-hidden" id="modal">
       <form
         method="post"
         action="enviar.php"
@@ -241,10 +180,105 @@
         onsubmit="return validateForm(e)"
       >
         <div class="wrapper">
-          <button class="btn btn--close" type="button">&times;</button>
-
+          <button class="btn btn--full btn--close" type="button">
+            &times;
+          </button>
           <h6>Seja um franqueado <b>Holms!</b></h6>
           <p>Tenha sua prórpia franquia de investigação particular.</p>
+          <!-- FORM__NAME -->
+          <div class="form__field-wrapper">
+            <label class="" for="name-form">Nome completo</label>
+            <input
+              type="text"
+              name="name-form"
+              id="nameForm"
+              placeholder="Seu nome aqui"
+              autocomplete="off"
+              oninput="validateName(this)"
+              required
+            />
+          </div>
+          <!-- FORM__CELLPHONE -->
+          <div class="form__field-wrapper">
+            <label class="" for="cellphone-form">Número de celular</label>
+            <input
+              type="tel"
+              name="cellphone-form"
+              id="cellphoneForm"
+              placeholder="Seu número aqui"
+              title="Seu número de celular com o código de área"
+              onkeypress="mascara(this)"
+              oninput="validateNumber(this)"
+              maxlength="15"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <!-- FORM__EMAIL -->
+          <div class="form__field-wrapper">
+            <label for="email-form">Seu melhor e-mail para contato</label>
+            <input
+              type="email"
+              name="email-form"
+              id="emailForm"
+              placeholder="email@exemplo.com"
+              oninput="validateEmail(this)"
+              required
+            />
+          </div>
+          <!-- FORM__AREA -->
+          <div class="form__field-wrapper">
+            <label for="area-form">Capital para investimento</label>
+            <div class="form__select-wrapper">
+              <select name="area-form" id="areaForm">
+                <option value="ate-30-mil-reais">Tenho até R$30 mil</option>
+                <option value="acima-de-50-mil-reais">Acima de R$50 mil</option>
+                <option value="sem-capital">Ainda não tenho capital</option>
+              </select>
+            </div>
+          </div>
+          <button
+            class="btn btn--full btn--submit"
+            name="submit-btn"
+            formaction="enviar.php"
+            type="submit"
+            id="enviar"
+          >
+            QUERO ME TORNAR UM FRANQUEADO
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- TODO: Merge both forms (form and form modal) into one -->
+    <!-- FORM MODAL -->
+
+    <!-- EXIT FORM -->
+    <div class="modal modal--exit-form is-hidden" id="modal">
+      <div class="modal__image-wrapper">
+        <img src="./public/images/detetive_2--bg.jpg" alt="" />
+      </div>
+
+      <form
+        method="post"
+        id="exitForm"
+        name="envia"
+        class="form form--exit"
+        autocomplete="off"
+      >
+        <div class="wrapper">
+          <button
+            class="btn btn--full btn--close btn--close-exit"
+            type="button"
+          >
+            &times;
+          </button>
+
+          <h6>Garantia de Sigilo Absoluto</h6>
+          <p>
+            Clientes <b>100% satisfeitos</b>. Não fique com dúvidas, nos chame
+            <b>agora mesmo!</b>
+          </p>
           <p id="alertForm" class="alert is-hidden">
             Preencha todos os campos corretamente!
           </p>
@@ -257,6 +291,7 @@
               id="nameForm"
               placeholder="Seu nome aqui"
               autocomplete="off"
+              oninput="validateName(this)"
               required
             />
           </div>
@@ -271,6 +306,7 @@
               placeholder="Seu número aqui"
               title="Seu número de celular com o código de área"
               onkeypress="mascara(this)"
+              oninput="validateNumber(this)"
               maxlength="15"
               autocomplete="off"
               required
@@ -285,33 +321,38 @@
               name="email-form"
               id="emailForm"
               placeholder="email@exemplo.com"
+              oninput="validateEmail(this)"
               required
             />
           </div>
 
           <!-- FORM__AREA -->
-          <div class="form__field-wrapper">
-            <label for="area-form">Capital para investimento*</label>
+          <!-- <div class="form__field-wrapper">
+            <label for="area-form"
+              >Qual a metragem da casa que você deseja construir?</label
+            >
             <div class="form__select-wrapper">
               <select name="area-form" id="areaForm">
-                <option value="50-100m²">Tenho até R$30 mil</option>
-                <option value="101-250m²">Acima de R$50 mil</option>
-                <option value="251-500 m²">Ainda não tenho capital</option>
+                <option value="50-100">50-100 m²</option>
+                <option value="101-250">101-250 m²</option>
+                <option value="251-500">251-500 m²</option>
               </select>
             </div>
-          </div>
+          </div> -->
 
           <button
-            class="btn btn--submit"
+            class="btn btn--full btn--submit"
             name="submit-btn"
             formaction="enviar.php"
             type="submit"
             id="enviar"
           >
-            QUERO ME TORNAR UM FRANQUEADO
+            Fale com o detetive
           </button>
         </div>
       </form>
     </div>
+
+    <script src="./main.js" async defer></script>
   </body>
 </html>
