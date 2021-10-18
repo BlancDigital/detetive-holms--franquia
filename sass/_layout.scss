@@ -48,10 +48,6 @@
   }
 }
 
-.form-container {
-  display: none; // hides the sidebar form
-}
-
 @media screen and (min-width: 37.5rem) {
   .section-hero {
     padding: 0;
@@ -73,7 +69,6 @@
     width: 56.6667%; // 66.5557% - 10% (margin)
     height: 100%;
     margin: 0 auto 0 10%;
-    // background: blue;
   }
 
   .section-hero__image {
@@ -90,7 +85,14 @@
     right: 2.5%;
     display: block;
     max-width: 30%;
-    //   background: yellow;
+  }
+
+  .form-container.form-container {
+    display: block; // reset (remove is-hidden)
+  }
+
+  .btn--fixed {
+    display: none;
   }
 }
 
@@ -100,6 +102,5 @@
     top: 2.5%;
     right: 10%;
     max-width: 22.6667%;
-    //   background: yellow;
   }
 }
