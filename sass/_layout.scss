@@ -9,6 +9,25 @@
 .section-hero {
   width: 100%;
   background-color: var(--clr-main);
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    line-height: 1;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+.section-hero__image {
+  display: none;
+  max-width: 300px;
+  margin-right: -5.5%;
 }
 
 .section-numbers {
@@ -22,6 +41,8 @@
 }
 
 .section-primeira {
+  text-align: justify;
+
   p + p {
     margin-top: 2rem;
   }
@@ -31,16 +52,20 @@
   display: none; // hides the sidebar form
 }
 
+@media screen and (min-width: 37.5rem) {
+  .section-hero {
+    padding: 0;
+  }
+
+  .section-hero__image {
+    display: block;
+  }
+}
+
 // 900px
 @media screen and (min-width: 56.25rem) {
   .fluid.fluid {
     width: 100%;
-  }
-
-  .align-left {
-    width: 66.66%;
-    //   height: 400px;
-    //   background-color: red;
   }
 
   .container {
@@ -49,6 +74,10 @@
     height: 100%;
     margin: 0 auto 0 10%;
     // background: blue;
+  }
+
+  .section-hero__image {
+    margin-right: -1.25%;
   }
 
   .cards--numbers {
