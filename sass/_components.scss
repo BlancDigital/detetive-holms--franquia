@@ -93,12 +93,20 @@ $clr-main: #ffb623;
   }
 
   .amount {
-    font-size: 3rem;
+    margin-top: -1rem;
+    font-size: 4rem;
+    font-weight: 700;
     color: var(--clr-main);
+
+    > span {
+      margin-left: -0.75rem;
+      font-size: 2rem;
+    }
   }
 
   .subtitle {
-    font-size: 0.85rem;
+    margin-top: -1.5rem;
+    // font-size: 0.85rem;
     font-weight: 300;
     text-align: center;
   }
