@@ -30,21 +30,19 @@
   margin-right: -5.5%;
 }
 
-.section-numbers {
-  .subtitle {
-    font-weight: 500;
-  }
-
-  .amount {
-    font-family: var(--ff-title);
-  }
-}
-
 .section-primeira {
-  text-align: justify;
+  .section-primeira__text-image {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.125rem;
+    text-align: justify;
+  }
 
   p + p {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -93,6 +91,14 @@
 
   .btn--fixed {
     display: none;
+  }
+}
+
+@media screen and (min-width: 25rem) {
+  .section-primeira {
+    .section-primeira__text-image {
+      width: 80%;
+    }
   }
 }
 
