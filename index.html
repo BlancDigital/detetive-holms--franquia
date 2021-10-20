@@ -141,6 +141,43 @@
             </div>
           </div>
           <!-- end of item -->
+          <!-- start of item -->
+          <div class="cards__card">
+            <img src="./public/images/lupa.png" alt="" width="86" height="86" />
+            <div class="cards__card__text">
+              <p class="title">Preparação</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="cards__card">
+            <img
+              src="./public/images/sistema.png"
+              alt=""
+              width="101"
+              height="86"
+            />
+            <div class="cards__card__text">
+              <p class="title">Preparação</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- start of item -->
+          <div class="cards__card">
+            <img
+              src="./public/images/rastreador.png"
+              alt=""
+              width="53"
+              height="86"
+            />
+            <div class="cards__card__text">
+              <p class="title">Preparação</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <!-- end of item -->
         </div>
       </div>
     </section>
@@ -148,20 +185,25 @@
     <!-- #SECTION-PRIMEIRA -->
     <section class="section-primeira fluid">
       <div class="container">
-        <h2>Lorem, ipsum dolor.</h2>
+        <h2>1ª franquia de investigação do Brasil!</h2>
+        <img
+          src="./public/images/1st.png"
+          alt=""
+          class="section-primeira__text-image"
+        />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam,
-          voluptates dignissimos architecto similique corrupti voluptatibus
-          illum repellendus excepturi eos mollitia porro fugiat recusandae, in
-          minima optio distinctio, quis sint pariatur.
+          A área de investigação particular cresce exponencialmente pelo Brasil
+          e pelo mundo todos os anos. Dessa forma nós da Holms somos a primeira
+          empresa de investigação particular de modo a atender em todo
+          território nacional nossos clientes.
         </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          perspiciatis corrupti provident culpa, eos voluptate fugiat recusandae
-          quae magni voluptas!
-        </p>
+        <p>Venha fazer parte do time de franquia que mais cresce hoje!</p>
 
+        <p>
+          Não perca tempo, preencha nosso formulário, e tenha a melhor franquia
+          do mercado!
+        </p>
         <div class="logo"><img src="./public/images/logo.png" alt="" /></div>
       </div>
     </section>
@@ -188,43 +230,67 @@
           <!-- FORM__NAME -->
           <div class="form__field-wrapper">
             <label class="" for="name-form">Nome completo</label>
-            <input
-              type="text"
-              name="name-form"
-              id="nameForm"
-              placeholder="Seu nome aqui"
-              autocomplete="off"
-              oninput="validateName(this)"
-              required
-            />
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/user_2.png"
+                alt=""
+                width="16"
+                height="16"
+              />
+              <input
+                type="text"
+                name="name-form"
+                id="nameForm"
+                placeholder="Seu nome aqui"
+                autocomplete="off"
+                oninput="validateName(this)"
+                required
+              />
+            </div>
           </div>
           <!-- FORM__CELLPHONE -->
           <div class="form__field-wrapper">
             <label class="" for="cellphone-form">Número de celular</label>
-            <input
-              type="tel"
-              name="cellphone-form"
-              id="cellphoneForm"
-              placeholder="Seu número aqui"
-              title="Seu número de celular com o código de área"
-              onkeypress="mascara(this)"
-              oninput="validateNumber(this)"
-              maxlength="15"
-              autocomplete="off"
-              required
-            />
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/tel_2.png"
+                alt=""
+                width="16"
+                height="16"
+              />
+              <input
+                type="tel"
+                name="cellphone-form"
+                id="cellphoneForm"
+                placeholder="Seu número aqui"
+                title="Seu número de celular com o código de área"
+                onkeypress="mascara(this)"
+                oninput="validateNumber(this)"
+                maxlength="15"
+                autocomplete="off"
+                required
+              />
+            </div>
           </div>
           <!-- FORM__EMAIL -->
           <div class="form__field-wrapper">
             <label for="email-form">Seu melhor e-mail para contato</label>
-            <input
-              type="email"
-              name="email-form"
-              id="emailForm"
-              placeholder="email@exemplo.com"
-              oninput="validateEmail(this)"
-              required
-            />
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/mail_3.png"
+                alt=""
+                width="16"
+                height="14"
+              />
+              <input
+                type="email"
+                name="email-form"
+                id="emailForm"
+                placeholder="email@exemplo.com"
+                oninput="validateEmail(this)"
+                required
+              />
+            </div>
           </div>
           <!-- FORM__AREA -->
           <div class="form__field-wrapper">
@@ -250,9 +316,6 @@
       </form>
     </div>
 
-    <!-- TODO: Merge both forms (form and form modal) into one -->
-    <!-- FORM MODAL -->
-
     <!-- EXIT FORM -->
     <div class="modal modal--exit-form is-hidden" id="modal">
       <div class="modal__image-wrapper">
@@ -274,71 +337,77 @@
             &times;
           </button>
 
-          <h6>Garantia de Sigilo Absoluto</h6>
-          <p>
-            Clientes <b>100% satisfeitos</b>. Não fique com dúvidas, nos chame
-            <b>agora mesmo!</b>
-          </p>
+          <h6>Você não precisa ser um detetive!</h6>
+          <p>Para ter a melhor franquia de investigação particular!</p>
+          <p>Preencha e saiba o segredo da Holms!</p>
           <p id="alertForm" class="alert is-hidden">
             Preencha todos os campos corretamente!
           </p>
           <!-- FORM__NAME -->
           <div class="form__field-wrapper">
-            <label class="" for="name-form">Nome*</label>
-            <input
-              type="text"
-              name="name-form"
-              id="nameForm"
-              placeholder="Seu nome aqui"
-              autocomplete="off"
-              oninput="validateName(this)"
-              required
-            />
+            <label class="" for="name-form">Nome completo</label>
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/user_2.png"
+                alt=""
+                width="16"
+                height="16"
+              />
+              <input
+                type="text"
+                name="name-form"
+                id="nameForm"
+                placeholder="Seu nome aqui"
+                autocomplete="off"
+                oninput="validateName(this)"
+                required
+              />
+            </div>
           </div>
-
           <!-- FORM__CELLPHONE -->
           <div class="form__field-wrapper">
-            <label class="" for="cellphone-form">Número de celular*</label>
-            <input
-              type="tel"
-              name="cellphone-form"
-              id="cellphoneForm"
-              placeholder="Seu número aqui"
-              title="Seu número de celular com o código de área"
-              onkeypress="mascara(this)"
-              oninput="validateNumber(this)"
-              maxlength="15"
-              autocomplete="off"
-              required
-            />
+            <label class="" for="cellphone-form">Número de celular</label>
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/tel_2.png"
+                alt=""
+                width="16"
+                height="16"
+              />
+              <input
+                type="tel"
+                name="cellphone-form"
+                id="cellphoneForm"
+                placeholder="Seu número aqui"
+                title="Seu número de celular com o código de área"
+                onkeypress="mascara(this)"
+                oninput="validateNumber(this)"
+                maxlength="15"
+                autocomplete="off"
+                required
+              />
+            </div>
           </div>
-
           <!-- FORM__EMAIL -->
           <div class="form__field-wrapper">
-            <label for="email-form">Seu melhor e-mail para contato*</label>
-            <input
-              type="email"
-              name="email-form"
-              id="emailForm"
-              placeholder="email@exemplo.com"
-              oninput="validateEmail(this)"
-              required
-            />
-          </div>
-
-          <!-- FORM__AREA -->
-          <!-- <div class="form__field-wrapper">
-            <label for="area-form"
-              >Qual a metragem da casa que você deseja construir?</label
-            >
-            <div class="form__select-wrapper">
-              <select name="area-form" id="areaForm">
-                <option value="50-100">50-100 m²</option>
-                <option value="101-250">101-250 m²</option>
-                <option value="251-500">251-500 m²</option>
-              </select>
+            <label for="email-form">Seu melhor e-mail para contato</label>
+            <div class="form__field-wrapper__input">
+              <img
+                src="./public/images/mail_3.png"
+                alt=""
+                width="16"
+                height="14"
+              />
+              <input
+                type="email"
+                name="email-form"
+                id="emailForm"
+                placeholder="email@exemplo.com"
+                oninput="validateEmail(this)"
+                required
+              />
             </div>
-          </div> -->
+          </div>
 
           <button
             class="btn btn--full btn--submit"
@@ -347,7 +416,7 @@
             type="submit"
             id="enviar"
           >
-            Fale com o detetive
+            Seja um franqueado
           </button>
         </div>
       </form>
