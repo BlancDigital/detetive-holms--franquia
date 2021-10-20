@@ -128,11 +128,6 @@ h2 {
     scroll-behavior: auto !important;
   }
 }
-.subtitle {
-  font-family: var(--ff-subtitle);
-  text-align: center;
-}
-
 .section-center-mb {
   width: 90%;
   margin: 0 auto;
@@ -257,6 +252,7 @@ h2 {
 }
 .card .amount {
   margin-top: -1rem;
+  font-family: var(--ff-title);
   font-size: 4rem;
   font-weight: 700;
   color: var(--clr-main);
@@ -267,7 +263,8 @@ h2 {
 }
 .card .subtitle {
   margin-top: -1.5rem;
-  font-weight: 300;
+  font-family: var(--ff-subtitle);
+  font-weight: 500;
   text-align: center;
 }
 
@@ -311,23 +308,27 @@ h2 {
   /* Style the input fields */
 }
 .form h6 {
+  margin-bottom: 0.5rem;
   font-size: var(--fs-md);
-  line-height: 1;
+  line-height: 1.15;
   text-align: center;
 }
 .form p {
+  line-height: 1.25;
+}
+.form p:last-child(1) {
   margin-bottom: 1em;
 }
 .form input {
   width: 100%;
-  padding: 0.3125rem;
+  padding: 0;
   font-size: 1.0625rem;
   color: var(--clr-black);
-  border: 0.0625rem solid var(--select-border);
+  border: 0;
   border-radius: 0.25rem;
 }
-.form input:focus-within {
-  border: 0.0625em solid var(--select-focus);
+.form input:focus-visible {
+  outline: 0;
 }
 .form select {
   width: 100%;
@@ -360,6 +361,23 @@ h2 {
 
 .form__field-wrapper {
   margin-top: 1em;
+}
+
+.form__field-wrapper__input {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.3125rem;
+  padding-left: 0.625rem;
+  font-size: 1.0625rem;
+  color: var(--clr-black);
+  border: 0.0625rem solid var(--select-border);
+  border-radius: 0.25rem;
+}
+
+.form__field-wrapper__input:focus-within {
+  outline: 0.1125rem solid var(--select-focus);
 }
 
 .form__select-wrapper {
@@ -456,12 +474,8 @@ select,
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0.3125em 0.9375em;
 }
 .modal .form h6 {
-  margin-bottom: 0.5em;
   font-size: var(--fs-lg);
   text-align: left;
-}
-.modal .form p {
-  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 56.25rem) {
@@ -518,18 +532,25 @@ select,
   color: var(--clr-white);
 }
 .form--exit .wrapper {
-  padding-top: 25%;
+  padding-top: 15%;
   background-color: #6d0101;
 }
 .form--exit h6 {
   font-weight: 800;
+  line-height: 1.15;
   color: var(--clr-white);
   text-align: center;
   text-transform: uppercase;
 }
-.form--exit p {
+.form--exit p + p {
   font-size: var(--fs-sm);
   font-weight: 600;
+}
+.form--exit .form__field-wrapper__input {
+  background-color: var(--clr-white);
+}
+.form--exit .form__field-wrapper__input:focus-within {
+  outline: 0.225rem solid blue;
 }
 .form--exit input {
   color: var(--clr-black);
@@ -569,18 +590,17 @@ select,
   margin-right: -5.5%;
 }
 
-.section-numbers .subtitle {
-  font-weight: 500;
+.section-primeira .section-primeira__text-image {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
-.section-numbers .amount {
-  font-family: var(--ff-title);
-}
-
-.section-primeira {
+.section-primeira p {
+  font-size: 1.125rem;
   text-align: justify;
 }
 .section-primeira p + p {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 37.5rem) {
@@ -626,6 +646,11 @@ select,
 
   .btn--fixed {
     display: none;
+  }
+}
+@media screen and (min-width: 25rem) {
+  .section-primeira .section-primeira__text-image {
+    width: 80%;
   }
 }
 @media screen and (min-width: 75rem) {
