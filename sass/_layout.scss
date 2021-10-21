@@ -102,7 +102,9 @@
 @media screen and (min-width: 25rem) {
   .section-primeira {
     .section-primeira__text-image {
-      width: 80%;
+      float: left;
+      width: 50%;
+      margin-right: 0.5rem;
     }
   }
 }
