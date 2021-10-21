@@ -135,9 +135,6 @@ form.addEventListener(
       // })
 
       // Event snippet for Envio de formulário conversion page
-      gtag("event", "conversion", {
-        send_to: "AW-302885338/DhUICMHkyvMCENrTtpAB",
-      })
       return true
     } else {
       e.preventDefault()
@@ -222,7 +219,6 @@ const cellphoneRegex =
   /^\(?(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/
 
 function validateNumber(element) {
-  console.log(element instanceof HTMLElement)
   // if the number passes on the regExp, validate
   if (cellphoneRegex.test(element.value)) {
     element.style.borderBottom = "0.25rem solid green"
@@ -285,12 +281,9 @@ function validateEmail(element) {
 // VALIDATE FORM
 
 function validateForm(e) {
-  console.log(isNumberValidated, isNameValidated, isEmailValidated)
   if (isNumberValidated && isNameValidated && isEmailValidated) {
-    console.log(e)
     return true
   } else {
-    console.log("--")
     alertForm.classList.remove("is-hidden")
     return false
   }
