@@ -14,9 +14,36 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Questrial&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-210795838-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-210795838-1")
+    </script>
+    <!-- Global site tag (gtag.js) - Google Ads: 10794125427 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-10794125427"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "AW-10794125427")
+    </script>
 
     <!-- url -->
-    <link rel="canonical" href="http://..." />
     <meta property="og:url" content="http://..." />
     <meta name="twitter:url" content="http://..." />
 
@@ -314,9 +341,11 @@
             <label for="quantia-form">Capital para investimento</label>
             <div class="form__select-wrapper">
               <select name="quantia-form" id="areaForm">
-                <option value="ate-30-mil-reais">Tenho até R$30 mil</option>
-                <option value="acima-de-50-mil-reais">Acima de R$50 mil</option>
-                <option value="sem-capital">Ainda não tenho capital</option>
+                <option value="Até 30 mil reais">Tenho até R$30 mil</option>
+                <option value="Acima de 30 mil reais">Acima de R$50 mil</option>
+                <option value="Ainda não tenho capital">
+                  Ainda não tenho capital
+                </option>
               </select>
             </div>
           </div>
@@ -336,7 +365,7 @@
     <!-- EXIT FORM -->
     <div class="modal modal--exit-form is-hidden" id="modal">
       <div class="modal__image-wrapper">
-        <img src="./public/images/detetive_2--bg.jpg" alt="" />
+        <img src="./public/images/saida.jpg" alt="" />
       </div>
 
       <form
