@@ -293,7 +293,6 @@ h2 {
 .form-container .wrapper {
   position: relative;
   width: 90%;
-  max-width: 31.25rem;
   height: 100%;
   padding: 2.25rem;
   padding-top: 4rem;
@@ -504,7 +503,7 @@ select,
   }
 
   .form .wrapper {
-    width: initial;
+    width: 100%;
     padding-top: 2.25rem;
     margin: 0;
     border-radius: 0;
@@ -669,6 +668,11 @@ select,
     top: 2.5%;
     right: 10%;
     max-width: 22.6667%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .section-diferenciais .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .alert {
