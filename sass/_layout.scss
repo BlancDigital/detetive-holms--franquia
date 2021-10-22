@@ -51,13 +51,17 @@
   }
 }
 
-@media screen and (min-width: 37.5rem) {
-  .section-hero {
-    padding: 0;
-  }
+footer {
+  padding-block: 2.25vh;
+  font-size: 1.15rem;
+  font-family: var(--ff-title);
+  font-weight: bold;
+  text-align: center;
 
-  .section-hero__image {
-    display: block;
+  span {
+    display: inline-block;
+    transform: rotateZ(90deg);
+    margin-left: 0.5rem;
   }
 }
 
@@ -119,6 +123,13 @@
 }
 
 @media screen and (min-width: 80rem) {
+  .section-hero {
+    padding: 2rem 0 0 0;
+  }
+  .section-hero__image {
+    display: block;
+    align-self: flex-end;
+  }
   .section-diferenciais {
     .cards {
       grid-template-columns: repeat(3, 1fr);
