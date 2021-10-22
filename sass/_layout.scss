@@ -117,3 +117,11 @@
     max-width: 22.6667%;
   }
 }
+
+@media screen and (min-width: 80rem) {
+  .section-diferenciais {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
